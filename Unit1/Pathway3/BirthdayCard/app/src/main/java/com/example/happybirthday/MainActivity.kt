@@ -33,7 +33,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             HappyBirthdayTheme {
                 Surface(color = MaterialTheme.colors.background) {
-
+                    BirthdayGreetingWithText(
+                        message = "Happy Birthday Android!",
+                        from = "- from bywindow"
+                    )
                 }
             }
         }
@@ -62,13 +65,8 @@ fun BirthdayGreetingWithText(message: String, from: String) {
 fun BirthdayGreetingWithImage(message: String, from: String) {
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
 // 4. 이미지 컴포저블 추가
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
 private fun BirthdayCardPreview() {
     HappyBirthdayTheme() {
